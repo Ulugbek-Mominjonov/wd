@@ -1,3 +1,15 @@
+/* Variable */
+:root{
+  /* color  */
+  --heading-color: #000000;
+  --text-color: #727272;
+  --button-color: #FFFFFF;
+  --form-color: #5F5D5D;
+
+  /* fonts  */
+  --main-font: "Roboto", "Arial", san-serif;
+}
+
 /* FONTS  */
 /* roboto-regular - latin */
 @font-face {
@@ -25,11 +37,11 @@ html{
 body{
   padding: 0;
   margin: 0;
-  font-family: "Rubik", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 23px;
-  color: #515151;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
 }
 .visually-hidden {
   position: absolute;
