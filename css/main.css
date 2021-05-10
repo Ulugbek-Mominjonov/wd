@@ -74,6 +74,13 @@ img{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.list{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
 .button{
   display: inline-block;
   padding: 20px 36px;
@@ -83,6 +90,14 @@ img{
   text-decoration: none;
   background-color: var(--active);
   color: var(--button-color);
+}
+.section-title{
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  text-align: center;
+  color: var(--heading-color);
 }
 
 /* SITE HEADER  */
@@ -151,4 +166,57 @@ img{
 }
 .hero-text{
   margin-bottom: 50px;
+}
+
+/* about-section */
+.about-section{
+  padding: 100px 0;
+  background-color: #E5E5E5;
+}
+.about-box{
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-info{
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+/* project-section */
+.project-section{
+  padding: 100px 0;
+  background-color: #34547A;
+}
+.project-list{
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-item{
+  display: flex;
+  align-items: center;
+}
+.project-item + .project-item{
+  margin-left: 49px;
+}
+.project-item::before{
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-image: url("../img/project-img.png");
+  background-position: center;
+  background-size: contain;
+}
+.project-name{
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+.project-name > span{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
 }
