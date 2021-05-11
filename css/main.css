@@ -33,6 +33,7 @@
 /* Common styles */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *::after,
@@ -42,6 +43,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  margin-top: 138px;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 16px;
@@ -87,13 +89,20 @@ img {
 }
 .button {
   display: inline-block;
-  padding: 20px 36px;
+  padding: 18px 34px;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.1em;
   text-decoration: none;
   background-color: var(--active);
   color: var(--button-color);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+.button:hover{
+  color: var(--active);
+  background-color: transparent;
+  border: 2px solid var(--active);
 }
 .section-title {
   margin: 0;
@@ -105,10 +114,10 @@ img {
 
 /* SITE HEADER  */
 .site-header {
-  /* position: fixed;
+  position: fixed;
   width: 100%;
   top: 0;
-  left: 0; */
+  left: 0;
   background-color: #eeeff1;
   z-index: 99;
 }
@@ -134,12 +143,29 @@ img {
   margin-left: 42px;
 }
 .nav-link {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.1em;
   color: var(--heading-color);
   text-decoration: none;
+}
+.nav-link::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: var(--active);
+  transition: 0.3s ease;
+}
+.nav-link:hover{
+  color: var(--active);
+}
+.nav-link:hover::after{
+  width: 50%;
 }
 .gamburger {
   display: none;
@@ -398,7 +424,8 @@ textarea {
   border: none;
 }
 .form-button {
-  border: none;
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 
 /* SITE-FOOTER */
@@ -437,13 +464,15 @@ textarea {
 @media only screen and (max-width: 1200px) {
   body {
     font-size: 14px;
+    margin-top: 78px;
   }
   .container {
     padding-left: 50px;
     padding-right: 50px;
   }
   .button {
-    padding: 15px 31px;
+    padding: 13px 29px;
+    border: 2px solid transparent;
     font-size: 14px;
   }
 
@@ -487,7 +516,8 @@ textarea {
     padding-right: 30px;
   }
   .button {
-    padding: 11px 27px;
+    padding: 9px 25px;
+    border: 2px solid transparent;
     font-size: 13px;
   }
   .section-title {
@@ -589,6 +619,7 @@ textarea {
   }
   .nav-link:hover {
     background-color: blue;
+    color: wheat;
   }
 
   /* HERO  */
@@ -664,7 +695,8 @@ textarea {
     padding-right: 25px;
   }
   .button {
-    padding: 10px 25px;
+    padding: 8px 23px;
+    border: 2px solid transparent;
     font-size: 13px;
   }
   .section-title {

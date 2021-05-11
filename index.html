@@ -26,16 +26,16 @@
             <a class="nav-link" href="#">ГЛАВНАЯ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ОБ АВТОРЕ</a>
+            <a class="nav-link" href="#about">ОБ АВТОРЕ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">РАБОТЫ</a>
+            <a class="nav-link" href="#project">РАБОТЫ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ПРОЦЕСС</a>
+            <a class="nav-link" href="#how-work">ПРОЦЕСС</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">КОНТАКТЫ</a>
+            <a class="nav-link" href="#contact">КОНТАКТЫ</a>
           </li>
         </ul>
       </div>
@@ -57,7 +57,7 @@
     </section>
 
     <!-- About section  -->
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="about-box">
         <h2 class="about-title section-title">Обо мне</h2>
         <p class="about-info">
@@ -67,7 +67,7 @@
     </section>
 
     <!-- My project -->
-    <section class="project-section">
+    <section class="project-section" id="project">
       <div class="container">
         <h2 class="visually-hidden">My projects</h2>
         <ul class="project-list">
@@ -94,7 +94,7 @@
     </section>
 
     <!-- My skills -->
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
       <div class="container skill-container">
         <div class="skills-wrapper">
           <h2 class="skills-title section-title">Мои навыки</h2>
@@ -117,7 +117,7 @@
     </section>
 
     <!-- how I work -->
-    <section class="i-work-section">
+    <section class="i-work-section" id="how-work">
       <div class="container i-work-container">
         <h2 class="section-title">Как я работаю</h2>
         <p class="i-work-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
@@ -162,13 +162,13 @@
     </section>
 
     <!-- web-sayt  -->
-    <section class="web-sayt-section">
+    <section class="web-sayt-section" id="contact">
       <div class="container web-sayt-container">
         <h2 class="section-title">Хотите веб-сайт?</h2>
         <p class="websayt-info">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
         <form action="" class="web-sayt-form" method="POST">
-          <input type="text" name="client0_name" id="name" placeholder="Ваше имя">
-          <input type="email" name="client_email" id="email" placeholder="Ваш e-mail">
+          <input type="text" name="client0_name" id="name" placeholder="Ваше имя" required>
+          <input type="email" name="client_email" id="email" placeholder="Ваш e-mail" required>
           <textarea name="text" id="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
           <button class="button form-button" type="submit">ОТПРАВИТЬ</button>
         </form>
@@ -196,9 +196,6 @@
       </div>
     </div>
   </footer>
-
-
-
 
   <script src="js/main.js"></script>
 </body>
