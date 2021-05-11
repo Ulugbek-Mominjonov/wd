@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WD</title>
   <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -13,10 +14,14 @@
     <nav class="site-nav">
       <div class="container site-nav-container">
         <a href="#" class="logo">
-          <img class="logo-img" src="img/WD.png" alt="Logotip image" width="96" height="60">
+          <img class="logo-img" src="img/WD.png" alt="Logotip image" width="85" height="38">
         </a>
 
-        <ul class="nav-list">
+        <button class="gamburger" id="gamburger" type="button" onclick="dropdown()">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="#">ГЛАВНАЯ</a>
           </li>
@@ -65,7 +70,7 @@
     <section class="project-section">
       <div class="container">
         <h2 class="visually-hidden">My projects</h2>
-        <ul class="project-list list">
+        <ul class="project-list">
           <li class="project-item">
             <h3 class="project-name">40+ <br><span>проектов</span></h3>
           </li>
@@ -116,38 +121,81 @@
       <div class="container i-work-container">
         <h2 class="section-title">Как я работаю</h2>
         <p class="i-work-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-        <iframe class="i-work-video" width="560" height="315" src="https://www.youtube.com/embed/E9OKpacyUSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <ul class="work-list list">
-          <li class="work-item">
-            <img src="img/work1.png" alt="image1" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work2.png" alt="image2" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work1.png" alt="image1" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work2.png" alt="image2" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work1.png" alt="image1" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work2.png" alt="image2" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work1.png" alt="image1" class="work-image">
-          </li>
-          <li class="work-item">
-            <img src="img/work2.png" alt="image2" class="work-image">
-          </li>
-        </ul>
+        <iframe class="i-work-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/E9OKpacyUSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <ul class="work-list">
+        <li class="work-item">
+          <img src="img/work1.png" alt="image1" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work2.png" alt="image2" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work1.png" alt="image1" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work2.png" alt="image2" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work1.png" alt="image1" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work2.png" alt="image2" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work1.png" alt="image1" class="work-image">
+        </li>
+        <li class="work-item">
+          <img src="img/work2.png" alt="image2" class="work-image">
+        </li>
+      </ul>
+    </section>
 
+    <!-- Microsoft -->
+    <section class="microsoft-section">
+      <div class="container microsoft-container">
+        <img src="img/microsoft.png" alt="microsoft" class="microsoft" width="255" height="120">
+        <img src="img/microsoft.png" alt="microsoft" class="microsoft" width="255" height="120">
+        <img src="img/microsoft.png" alt="microsoft" class="microsoft" width="255" height="120">
+        <img src="img/microsoft.png" alt="microsoft" class="microsoft" width="255" height="120">
+      </div>
+    </section>
+
+    <!-- web-sayt  -->
+    <section class="web-sayt-section">
+      <div class="container web-sayt-container">
+        <h2 class="section-title">Хотите веб-сайт?</h2>
+        <p class="websayt-info">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
+        <form action="" class="web-sayt-form" method="POST">
+          <input type="text" name="client0_name" id="name" placeholder="Ваше имя">
+          <input type="email" name="client_email" id="email" placeholder="Ваш e-mail">
+          <textarea name="text" id="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
+          <button class="button form-button" type="submit">ОТПРАВИТЬ</button>
+        </form>
+      </div>
     </section>
   </main>
+
+  <!-- site-footer  -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <h2 class="footer-title">Иванов Иван</h2>
+        <p class="footer-text">(с) 2018. Все права защищены.</p>
+      </div>
+      <div class="social-networks">
+        <a href="#" class="social-network">
+          <i class="fab fa-vk"></i>
+        </a>
+        <a href="#" class="social-network">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-network">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 
 
 
