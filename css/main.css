@@ -30,6 +30,14 @@
     /* Chrome 26+, Opera 23+, Firefox 39+ */
       url("../fonts/roboto-v27-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+@keyframes navlist {
+  from{
+    transform: translateY(-120%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
 /* Common styles */
 html {
   box-sizing: border-box;
@@ -99,7 +107,7 @@ img {
   transition: 0.3s ease;
   border: 2px solid transparent;
 }
-.button:hover{
+.button:hover {
   color: var(--active);
   background-color: transparent;
   border: 2px solid var(--active);
@@ -151,7 +159,7 @@ img {
   color: var(--heading-color);
   text-decoration: none;
 }
-.nav-link::after{
+.nav-link::after {
   position: absolute;
   content: "";
   left: 0;
@@ -161,10 +169,10 @@ img {
   background-color: var(--active);
   transition: 0.3s ease;
 }
-.nav-link:hover{
+.nav-link:hover {
   color: var(--active);
 }
-.nav-link:hover::after{
+.nav-link:hover::after {
   width: 50%;
 }
 .gamburger {
@@ -591,8 +599,9 @@ textarea {
   }
   .nav-list {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 78px;
+    bottom: 0;
     left: 0;
     width: 100%;
     padding-top: 30px;
@@ -601,6 +610,7 @@ textarea {
     align-items: center;
     background-color: rgba(33, 33, 33, 0.7);
     transition: 1s ease;
+    animation: navlist 0.3s 1 forwards;
   }
   .gamburger {
     display: block;
@@ -674,14 +684,15 @@ textarea {
 
   /* microsoft */
   .microsoft-container {
-      grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 
   /* .web-sayt  */
-  .web-sayt-section{
+  .web-sayt-section {
     padding: 60px 0;
   }
-  input[type="text"], input[type="email"] {
+  input[type="text"],
+  input[type="email"] {
     width: 244px;
   }
 }
@@ -742,7 +753,7 @@ textarea {
   .skills-section {
     padding: 50px 0;
   }
-  .skill-container{
+  .skill-container {
     flex-direction: column;
   }
   .skill-container::after {
@@ -761,9 +772,9 @@ textarea {
     font-size: 14px;
     line-height: 15px;
   }
-  
+
   /* .i-work- */
-  .i-work-section{
+  .i-work-section {
     padding: 50px 0;
   }
   .i-work-video {
@@ -778,7 +789,8 @@ textarea {
   }
 
   /* .web-sayt  */
-  input[type="text"], input[type="email"] {
+  input[type="text"],
+  input[type="email"] {
     width: calc(50% - 15px);
   }
 
@@ -791,7 +803,7 @@ textarea {
   .footer-text {
     font-size: 12px;
     line-height: 15px;
-}
+  }
   .social-network {
     font-size: 15px;
   }
